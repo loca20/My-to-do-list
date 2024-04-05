@@ -12,17 +12,32 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
         integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/main.css">
     <script src="https://kit.fontawesome.com/7877a19f95.js" crossorigin="anonymous"></script>
-    <script defer src="./script.js"></script>
+    <script defer src="./js/script.js"></script>
 </head>
 
 <body class="body">
-<form class="js-form">
-    <input class="js-newTask">
-    <button>Dodaj zadanie</button>
-</form>
-
-<ul class="js-tasks"></ul>
+    <div class="container">
+        <header class="header">
+            <h1 class="header__title">Lista zadań</h1>
+        </header>
+        <section class="section">
+            <h2 class="section__title">Dodaj nowe zadanie</h2>
+            <div class="section__body">
+                <form class="form js-form">
+                    <input class="form__newTask js-newTask" placeholder="Co jest do zrobienia?">
+                    <button class="form__sendTaskButton">Dodaj zadanie</button>
+                </form>
+            </div>
+        </section>
+        <section class="section">
+            <h2 class="section__title">Lista zadań</h2>
+            <div class="section__body">
+                <ul class="tasks js-tasks"></ul>
+            </div>
+        </section>
+    </div>
 </body>
 
 </html>
