@@ -1,0 +1,14 @@
+.section {
+	background-color: #fff;
+	box-shadow: 0 0 4px rgb(170, 170, 170);
+}
+
+.section__title {
+	padding: 20px;
+	font-weight: 900;
+	border-bottom: 2px solid #ddd;
+}
+
+.section__body {
+	padding: 0 20px 20px;
+}
