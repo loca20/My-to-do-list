@@ -9,6 +9,12 @@
 	border-bottom: 2px solid #ddd;
 }
 
+@media (max-width: 414px) {
+	.section__title {
+		font-size: 20px;
+	}
+}
+
 .section__body {
 	padding: 0 20px 20px;
 }
