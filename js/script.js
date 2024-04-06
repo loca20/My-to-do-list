@@ -51,9 +51,9 @@
 
 		for (const task of tasks) {
 			htmlString += `
-        <li class="task"${
-					task.done ? ' style="text-decoration: line-through"' : ""
-				}>
+        <li class="task${
+					task.done ? " taskDone" : ""
+				}">
 		<button class="task__button js-done"><i class="fa-solid fa-check${
 			task.done ? "" : " task__buttonIcon"
 		}"></i></button>
