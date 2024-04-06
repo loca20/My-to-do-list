@@ -21,4 +21,9 @@
 	color: #fff;
 	border: none;
 	cursor: pointer;
+	transition: scale 0.3s;
+}
+
+.form__sendTaskButton:hover {
+	scale: 1.1;
 }

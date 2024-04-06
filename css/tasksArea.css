@@ -24,6 +24,11 @@
 	background-color: green;
 	color: #fff;
 	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.task__button:hover {
+	background-color: rgb(1, 152, 1);
 }
 
 .task__buttonIcon {
