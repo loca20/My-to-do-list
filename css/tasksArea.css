@@ -38,3 +38,7 @@
 .task__button--remove {
 	background-color: red;
 }
+
+.task__button--remove:hover {
+	background-color: rgb(255, 98, 98);
+}
