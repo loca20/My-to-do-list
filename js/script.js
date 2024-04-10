@@ -1,5 +1,5 @@
 {
-	const tasks = [
+	let tasks = [
 		{
 			content: "zrobić obiad",
 			done: false,
@@ -11,20 +11,27 @@
 	];
 
 	const addNewTask = (newTaskContent) => {
-		tasks.push({
-			content: newTaskContent,
-		});
+		tasks = [...tasks, { content: newTaskContent }];
 
 		render();
 	};
 
 	const removeTask = (taskIndex) => {
-		tasks.splice(taskIndex, 1);
+		tasks = [
+			...tasks.slice(0, taskIndex),
+			...tasks.slice(taskIndex + 1)
+		];
+
 		render();
 	};
 
 	const toggleTaskDone = (taskIndex) => {
-		tasks[taskIndex].done = !tasks[taskIndex].done;
+		tasks = [
+			...tasks.slice(0, taskIndex),
+			{...tasks[taskIndex], done: !tasks[taskIndex].done},
+			...tasks.slice(taskIndex +1),
+		]
+		
 		render();
 	};
 
@@ -51,9 +58,7 @@
 
 		for (const task of tasks) {
 			htmlString += `
-        <li class="task${
-					task.done ? " taskDone" : ""
-				}">
+        <li class="task${task.done ? " taskDone" : ""}">
 		<button class="task__button js-done"><i class="fa-solid fa-check${
 			task.done ? "" : " task__buttonIcon"
 		}"></i></button>
@@ -71,15 +76,15 @@
 	const onFormSubmit = (event) => {
 		event.preventDefault();
 
-    const input = document.querySelector(".js-newTask");
+		const input = document.querySelector(".js-newTask");
 		const newTaskContent = input.value.trim();
 		if (newTaskContent === "") {
 			return;
 		}
 
 		addNewTask(newTaskContent);
-    input.value = "";
-    input.focus();
+		input.value = "";
+		input.focus();
 	};
 
 	const init = () => {
