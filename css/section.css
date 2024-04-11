@@ -3,10 +3,16 @@
 	box-shadow: 0 0 4px rgb(170, 170, 170);
 }
 
-.section__title {
+.section__area {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	align-items: center;
 	padding: 20px;
+}
+
+.section__title {
+	margin: 0;
 	font-weight: 900;
-	border-bottom: 2px solid #ddd;
 }
 
 @media (max-width: 414px) {
@@ -15,6 +21,27 @@
 	}
 }
 
+.section__buttons {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 20px;
+}
+
+.section__button {
+	padding: 4px 12px;
+	border: none;
+	background: none;
+	color: teal;
+	cursor: pointer;
+}
+
+.section__button--disabled {
+	color: grey;
+	cursor: not-allowed;
+}
+
 .section__body {
-	padding: 0 20px 20px;
+	margin-bottom: 20px;
+	padding: 20px;
+	border-top: 2px solid #ddd;
 }
