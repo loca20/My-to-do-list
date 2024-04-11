@@ -10,6 +10,13 @@
 	padding: 20px;
 }
 
+@media (max-width: 768px) {
+	.section__area {
+		grid-template-columns: 1fr;
+		grid-gap: 10px;
+	}
+}
+
 .section__title {
 	margin: 0;
 	font-weight: 900;
@@ -25,6 +32,19 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-gap: 20px;
+}
+
+@media (max-width: 768px) {
+	.section__buttons {
+		grid-template-columns: 1fr;
+		grid-gap: 8px;
+	}
+}
+
+@media (max-width: 414px) {
+	.section__buttons {
+		font-size: 14px;
+	}
 }
 
 .section__button {
